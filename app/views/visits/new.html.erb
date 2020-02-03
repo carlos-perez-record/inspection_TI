@@ -1,0 +1,17 @@
+<!--PUBLICAR VISITA-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Publicar Visita</h1>
+      <%= form_for @visit do |v| %>
+        <div class="form-group">
+          <%= f.date_field :fecha, class: "form-control input-lg", placeholder: "Ingresa la fecha de la visita" %>
+        </div>
+        <div>
+          <%= f.submit "Publicar Visita", class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!--FIN PUBLICAR VISITA-->
