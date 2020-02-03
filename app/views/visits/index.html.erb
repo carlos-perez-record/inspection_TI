@@ -1,15 +1,23 @@
-<!-- LISTANDO VISITAS -->
-<h1>VISITAS</h1>
-<table>
-  <tr>
-    <th>ID:</th>
-    <th>FECHA:</th>
-  </tr>
-  <% @visits.each do |visit| %>
-    <tr>
-      <td><%= visit.id %></td>
-      <td><%= visit.fecha %></td>
-    </tr>
-  <% end %>
-</table>
-<!--FIN DEL CODIGO INICIAL-->
+<!--SE VINCULA BOOTSTRAP -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- LISTANDO VISITAS -->
+      <h1>VISITAS</h1>
+      <table>
+        <tr>
+          <th>ID:</th>
+          <th>FECHA:</th>
+        </tr>
+        <% @visits.each do |visit| %>
+          <tr>
+            <td><%= visit.id %></td>
+            <td><%= visit.fecha %></td>
+          </tr>
+        <% end %>
+      </table>
+      <!--FIN DEL CODIGO INICIAL-->
+    </div>
+  </div>
+</div>
+<!--FIN VINCULACION BOOTSTRAP-->
