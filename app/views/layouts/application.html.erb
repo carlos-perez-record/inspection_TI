@@ -4,12 +4,15 @@
     <title>InspectionTi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <!--Se agrega mensajes flash-->
+    <% if flash[:notice] %>
+      <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+    <!--Se termina codigo mensajes flash-->
     <%= yield %>
   </body>
 </html>
