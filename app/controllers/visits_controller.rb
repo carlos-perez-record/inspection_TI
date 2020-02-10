@@ -24,6 +24,10 @@ class VisitsController < ApplicationController
     @visit = Visit.find(params[:id])
   end
 
+  def edit
+    @visit = Visit.find(params[:id])
+  end
+
   private
 
   def visit_params
