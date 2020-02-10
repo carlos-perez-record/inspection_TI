@@ -12,7 +12,7 @@ class VisitsController < ApplicationController
 
   # Se crea metodo create
   def create
-    @visit = Visit.new
+    @visit = Visit.new(visit_params)
     if @visit.save
       redirect_to visits_index_path, notice: "La Visita fue publicada con éxito"
     else
@@ -20,11 +20,14 @@ class VisitsController < ApplicationController
     end
   end
 
+  def show
+    @visit = Visit.find(params[:id])
+  end
 
-  #private
-  # Metodo privado params
-  #def visit_params
-  #  params.require(:visit).permit(:fecha)
-  #end
+  private
+
+  def visit_params
+    params.require(:visit).permit(:fecha)
+  end
 
 end
