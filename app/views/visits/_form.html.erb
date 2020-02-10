@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1><%= form_title %></h1>
+      <%= form_for @visit do |v| %>
+        <div class="form-group">
+          <%= v.date_field :fecha, class: "form-control input-lg" %>
+        </div>
+        <div>
+          <%= v.submit form_title, class: "btn btn-primary btn-lg btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
