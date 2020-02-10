@@ -5,7 +5,7 @@
       <h1>Publicar Visita</h1>
       <%= form_for @visit do |v| %>
          <div class="form-group">
-          <%=  v.created_at :fecha, class: "form-control input-lg", placeholder: "Ingresa la fecha de la visita" %>
+          <%=  v.date_field :fecha, class: "form-control input-lg", placeholder: "Ingresa la fecha de la visita" %>
         </div> -->
         <div>
           <%= v.submit "Publicar Visita", class: "btn btn-primary btn-lg btn-block" %>
