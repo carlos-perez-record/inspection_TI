@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_04_202028) do
+ActiveRecord::Schema.define(version: 2020_02_09_235945) do
 
   create_table "visits", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "fecha"
   end
 
 end
