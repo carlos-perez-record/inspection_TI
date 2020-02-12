@@ -14,7 +14,7 @@ class VisitsController < ApplicationController
   def create
     @visit = Visit.new(visit_params)
     if @visit.save
-      redirect_to visits_index_path, notice: "La Visita fue publicada con éxito"
+      redirect_to visits_path, notice: "La Visita fue publicada con éxito"
     else
       render :new
     end
@@ -31,7 +31,7 @@ class VisitsController < ApplicationController
   def update
     @visit = Visit.find(params[:id])
     if @visit.update(visit_params)
-      redirect_to visits_index_path, notice: "La visita ha sido modificado con éxito"
+      redirect_to visits_path, notice: "La visita ha sido modificado con éxito"
     else
       render :edit
     end
@@ -40,7 +40,7 @@ class VisitsController < ApplicationController
   def destroy
     visit = Visit.find(params[:id])
     visit.destroy
-    redirect_to visits_index_path, notice: "La visita fue eliminada con éxito"
+    redirect_to visits_path, notice: "La visita fue eliminada con éxito"
   end
 
   private
