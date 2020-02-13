@@ -1,0 +1,30 @@
+<!--SE VINCULA BOOTSTRAP -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <!-- LISTANDO VISITAS -->
+      <h1>USUARIOS</h1>
+      <table>
+        <tr>
+          <th>CORREO:</th>
+          <th>NOMBRE:</th>
+          <th>CEDULA:</th>
+        </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.name %></td>
+            <td><%= user.cedula %></td>
+          </tr>
+        <% end %>
+        <!--CODIGO DEL BOTON PUBLICAR-->
+        <div class="text-right">
+          <%= link_to "Crear Usuario", new_user_path, class: "btn btn-primary" %>
+        </div>
+        <!--FIN DEL CODIGO DEL BOTON PUBLICAR-->
+      </table>
+      <!--FIN DEL CODIGO INICIAL-->
+    </div>
+  </div>
+</div>
+<!--FIN VINCULACION BOOTSTRAP-->
