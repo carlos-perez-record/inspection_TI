@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
   resources :users, only: [:index, :new, :create]
   resources :visits
   root 'visits#index'
