@@ -10,6 +10,9 @@ module InspectionTi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    # Se agregan estas lineas para poder configurar los mensajes de validacion en español
+    config.i18n.default_locale = :es
+    config.i18n.enforce_available_locales = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
