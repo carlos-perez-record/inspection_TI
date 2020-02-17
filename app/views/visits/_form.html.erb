@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <h1><%= form_title %></h1>
+      <h1><%= form_titlevisit %></h1>
       <!--Codigo de Mensaje de error cuando no se cumple las validaciones-->
       <% if @visit.errors.any? %>
         <div class="alert alert-danger">
@@ -18,7 +18,7 @@
           <%= v.date_field :fecha, class: "form-control input-lg" %>
         </div>
         <div>
-          <%= v.submit form_title, class: "btn btn-primary btn-lg btn-block" %>
+          <%= v.submit form_titlevisit, class: "btn btn-primary btn-lg btn-block" %>
         </div>
       <% end %>
     </div>

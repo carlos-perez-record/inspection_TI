@@ -7,7 +7,9 @@
         <div class="visit clearfix">
           <div class="visit-details">
             <span class="visit-title"><%= link_to visit.id, visit %></span>
-            <span class="visit-description"><%= visit.fecha %></span>
+            <span class="visit-title"><%= visit.fecha %></span>
+            <span class="visit-description"><%= link_to "Editar", edit_visit_path(visit) %></span>
+            <span class="visit-description"><%= link_to "Eliminar", visit, method: :delete, data: { confirm: "¿Estás seguro de eliminar esta visita?" } %></span>
           </div>
         </div>
         <% end %>

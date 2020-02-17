@@ -1,5 +1,5 @@
 module VisitsHelper
-  def form_title
+  def form_titlevisit
     @visit.new_record? ? "Registrar Visita" : "Modificar Visita"
   end
 end
