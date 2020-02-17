@@ -2,6 +2,17 @@
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
       <h1><%= form_title %></h1>
+      <!--Codigo de Mensaje de error cuando no se cumple las validaciones-->
+      <% if @visit.errors.any? %>
+        <div class="alert alert-danger">
+          <ul>
+            <% @visit.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <!--Fin de Codigo de error en la validacion-->
       <%= form_for @visit do |v| %>
         <div class="form-group">
           <%= v.date_field :fecha, class: "form-control input-lg" %>
