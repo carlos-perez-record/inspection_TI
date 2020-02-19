@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2020_02_13_144252) do
   end
 
   create_table "visits", force: :cascade do |t|
+    t.datetime "fecha"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "fecha"
   end
 
 end
