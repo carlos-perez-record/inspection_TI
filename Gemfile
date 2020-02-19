@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+# ruby '2.6.5'
+ruby '2.5.7'
 
 # bootstrap
 gem 'bootstrap',  '~>4.3.1'
