@@ -13,6 +13,7 @@ class VisitsController < ApplicationController
   # Se crea metodo create
   def create
     @visit = Visit.new(visit_params)
+    @visit.user = current_user
     if @visit.save
       redirect_to visits_path, notice: "La Visita fue publicada con éxito"
     else
