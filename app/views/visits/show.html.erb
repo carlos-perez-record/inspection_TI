@@ -2,8 +2,11 @@
   <header class="visit-header">
     <h1><%= @visit.id %></h1>
     <p><%= @visit.fecha %></p>
+    <div class="actions">
+      <%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_visit_path(@visit) %>
+      <%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, @visit, method: :delete, data: { confirm: "¿Estás seguro de eliminar esta visita?" } %>
+    </div>
   </header>
-
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
